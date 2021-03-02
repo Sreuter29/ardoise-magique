@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/magical-slate.css">
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=es6%2CArray.isArray%2CArray.of%2CArray.from%2CArray.prototype.filter%2CArray.prototype.find%2CArray.prototype.findIndex%2CArray.prototype.forEach%2CArray.prototype.includes%2CArray.prototype.indexOf%2CArray.prototype.keys%2CArray.prototype.lastIndexOf%2CArray.prototype.map%2CArray.prototype.reduce%2CArray.prototype.some%2CArray.prototype.sort%2CDate.now%2CElement.prototype.after%2CElement.prototype.append%2CElement.prototype.before%2CElement.prototype.classList%2CElement.prototype.cloneNode%2CElement.prototype.nextElementSibling%2CElement.prototype.placeholder%2CElement.prototype.previousElementSibling%2CElement.prototype.remove%2CElement.prototype.replaceWith%2CElement.prototype.scroll%2CElement.prototype.scrollBy%2CElement.prototype.scrollIntoView%2CElement.prototype.toggleAttribute%2CHTMLDocument%2CJSON%2CMap%2CMath.trunc%2CNumber.isInteger%2CNumber.isFinite%2CNumber.isNaN%2CNumber.parseFloat%2CNumber.parseInt%2CObject.assign%2CObject.create%2CObject.keys%2CObject.values%2CPromise%2CPromise.prototype.finally%2CString.prototype.fontcolor%2CString.prototype.fontsize%2CString.prototype.includes%2CString.prototype.italics%2CString.prototype.link%2CString.prototype.replaceAll%2CString.prototype.trim%2CWindow%2CXMLHttpRequest%2Cdocument%2Cdocument.getElementsByClassName%2Cdocument.querySelector%2Cdocument.visibilityState%2Cfetch%2CgetComputedStyle%2CinnerHeight%2CinnerWidth%2CpageXOffset%2CpageYOffset%2CrequestAnimationFrame%2Cscroll%2CscrollBy%2CscrollIntoView%2CscrollX%2CscrollY%2Csmoothscroll%2Cviewport%2Cwindow.scroll%2Cwindow.scrollBy" defer></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Classes -->
+    <script src="js/classes/ColorPalette.class.js"></script>
+    <script src="js/classes/Program.class.js"></script>
+    <script src="js/classes/Pen.class.js"></script>
+    <script src="js/classes/Slate.class.js"></script>
+</head>
+<body>
+    <h1><i class="fa fa-paint-brush"></i> Ardoise Magique ;-)</h1>
+
+    <main>
+        <canvas id="slate" class="slate" width="640" height="480"></canvas>
+
+        <canvas id="color-palette" class="color-palette hide" width="256" height="256"></canvas>
+    </main>
+
+    <hr>
+    <nav class="toolbar">
+        <ul>
+            <li>
+                <label>Outils</label>
+                <button id="tool-clear-canvas" title="Effacer"><i class="fa fa-eraser"></i></button>
+                <button id="tool-color-picker" title="Pipette"><i class="fa fa-eyedropper"></i></button>
+            </li>
+            <li>
+                <label>Couleur</label>
+                <div class="pen-color black" data-color="black"></div>
+                <div class="pen-color maroon" data-color="#5C2121"></div>
+                <div class="pen-color red" data-color="#B9121B"></div>
+                <div class="pen-color yellow" data-color="#FFBD07"></div>
+                <div class="pen-color green" data-color="#13B813"></div>
+                <div class="pen-color seagreen" data-color="#029E9A"></div>
+                <div class="pen-color blue" data-color="#0378A6"></div>
+            </li>
+            <li>
+                <label>Epaisseur</label>
+                <button class="pen-size" data-size="1">Fin</button>
+                <button class="pen-size" data-size="2">Normal</button>
+                <button class="pen-size" data-size="5">Epais</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Code principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>
